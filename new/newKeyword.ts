@@ -1,3 +1,6 @@
+// keyword 'this'is an implicit parameter, like how you would supply n to the function  (n) => n * n
+// when using this inside an object it creates the this context, and will refer to that object
+// inside a function it will refer to the global object, unless using es6 arrow functions then it will bind this to the object it's being used in
 function userCreator(name: string, score: number) {
   // Object.create always returns an empty object
   // when using Object.create(userFunctionStore) we create  a reference to  userFunction store (in __proto__)
