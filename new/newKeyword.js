@@ -1,3 +1,6 @@
+// keyword 'this' is an implicit parameter, like how you would supply n to the function (n) => n * n
+// when using this inside an object it creates the this context, and will refer to that object
+// inside a regular function it will refer to the global object, unless using es6 arrow functions then it will bind this to the object it's being used in
 function userCreator(name, score) {
     // Object.create always returns an empty object
     // when using Object.create(userFunctionStore) we create  a reference to  userFunction store (in __proto__)
@@ -19,8 +22,7 @@ var user2 = userCreator('Julia', 5);
 // when looking for user1.increment it will not be on user1, but inside __proto__ property, kind of similar to how closure remembers the scope around it
 user1.increment();
 console.log(user1, user2); // { name: 'Phil', score: 5 } { name: 'Julia', score: 5 }
-////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // showing that functions are more than just functions but are also objects with prototype etc
 var multiplyBy2 = function (num) {
     return num * 2;
@@ -29,8 +31,7 @@ multiplyBy2.stored = 5;
 console.log(multiplyBy2.stored); // 5
 console.log(multiplyBy2.prototype); // {}
 console.log(multiplyBy2(3)); // 6
-/////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Showing that functions have prototype, and that __proto__  'links' to prototype
 // using a capital letter in the name means it needs the new keyword to work properly, (or it is a class, basically)
 function UserCreator(name, score) {

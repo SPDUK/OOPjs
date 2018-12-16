@@ -13,8 +13,6 @@ const video = {
 video.showTags();
 
 /////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////
-console.log('____________________');
 
 const videoTwo = {
   title: 'two',
@@ -22,15 +20,13 @@ const videoTwo = {
   showTags() {
     this.tags.forEach(function(tag) {
       console.log(this.title + tag); //two1, two2, two3
-    }, this); // passing this means we will be in the execution context of the showTavgs method, this is pointing to.  [Can't do this with all functions in JS]
+    }, this); // passing this means we will be in the execution context of the showTags method, this is pointing to.  [Can't do this with all functions in JS, not preferred method]
   }
 };
 
 videoTwo.showTags();
 
 /////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////
-console.log('____________________');
 
 const videoThree = {
   title: 'three',
@@ -45,8 +41,6 @@ const videoThree = {
 videoThree.showTags();
 
 /////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////
-console.log('____________________');
 
 const videoFour = {
   title: 'four',
@@ -65,8 +59,6 @@ const videoFour = {
 videoFour.showTags();
 
 /////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////
-console.log('____________________');
 
 // uses an arrow function to use the scope of "this" being passed into it,
 // since the execution context of "this" is also an arrow function, the scope is the same as that of showTags
