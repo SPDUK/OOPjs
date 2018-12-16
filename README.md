@@ -4,4 +4,5 @@ Read .ts files for ES6, .js files for ES5
 
 folders:
 
-new: the keyword 'new' when used to create a class, also contains keyword this
+new: the keyword 'new' when used to create a class
+this: keyword 'this'

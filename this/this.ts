@@ -1,4 +1,6 @@
 // just a few loops inside objects to show the context of "this"
+// when using an arrow function "this" is the same as where it was defined,
+// but you can have multiple nested arrow functions and "this" will still point to the object where the first arrow function was defined
 
 const video = {
   title: 'one',
