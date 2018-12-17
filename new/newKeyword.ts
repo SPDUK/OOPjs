@@ -11,16 +11,16 @@ function userCreator(name: string, score: number) {
 }
 
 const userFunctionStore = {
-  increment: function() {
+  increment: function () {
     this.score++;
   },
-  login: function() {
+  login: function () {
     console.log("You're logged in");
   }
 };
 
-const user1 = userCreator('Phil', 4);
-const user2 = userCreator('Julia', 5);
+const user1 = userCreator("Phil", 4);
+const user2 = userCreator("Julia", 5);
 
 // when looking for user1.increment it will not be on user1, but inside __proto__ property, kind of similar to how closure remembers the scope around it
 user1.increment();
@@ -46,11 +46,11 @@ function UserCreator(name: string, score: number) {
   this.score = score;
 }
 
-UserCreator.prototype.increment = function() {
+UserCreator.prototype.increment = function () {
   this.score++;
 };
-UserCreator.prototype.login = function() {
-  console.log('login');
+UserCreator.prototype.login = function () {
+  console.log("login");
 };
 
 // using new mutates the execution context when calling UserCreator()
@@ -67,7 +67,7 @@ user3 = {
   }
 }
 */
-const user3 = new UserCreator('Eva', 9);
+const user3 = new UserCreator("Eva", 9);
 // user3.increment looks for user3.increment, and doesn't find it on user3, so then it looks inside __proto__, which contains increment
 // __proto__ links to UserCreator.prototype.increment and calls it
 user3.increment();
