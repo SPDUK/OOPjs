@@ -5,12 +5,12 @@
 function userCreator(name, score) {
     // Object.create always returns an empty object
     // when using Object.create(userFunctionStore) we create  a reference to  userFunction store (in __proto__)
-    var newUser = Object.create(userFunctionStore);
+    const newUser = Object.create(userFunctionStore);
     newUser.name = name;
     newUser.score = score;
     return newUser;
 }
-var userFunctionStore = {
+const userFunctionStore = {
     increment: function () {
         this.score++;
     },
@@ -18,14 +18,14 @@ var userFunctionStore = {
         console.log("You're logged in");
     }
 };
-var user1 = userCreator("Phil", 4);
-var user2 = userCreator("Julia", 5);
+const user1 = userCreator("Phil", 4);
+const user2 = userCreator("Julia", 5);
 // when looking for user1.increment it will not be on user1, but inside __proto__ property, kind of similar to how closure remembers the scope around it
 user1.increment();
 console.log(user1, user2); // { name: 'Phil', score: 5 } { name: 'Julia', score: 5 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // showing that functions are more than just functions but are also objects with prototype etc
-var multiplyBy2 = function (num) {
+const multiplyBy2 = num => {
     return num * 2;
 };
 multiplyBy2.stored = 5;
@@ -57,7 +57,7 @@ user3 = {
   }
 }
 */
-var user3 = new UserCreator("Eva", 9);
+const user3 = new UserCreator("Eva", 9);
 // user3.increment looks for user3.increment, and doesn't find it on user3, so then it looks inside __proto__, which contains increment
 // __proto__ links to UserCreator.prototype.increment and calls it
 user3.increment();

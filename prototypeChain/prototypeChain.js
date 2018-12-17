@@ -11,7 +11,7 @@
 // (similar to how you would look for methods in a class, because a class is just a function after all)
 // You would only see the prototype if you ever used the 'new' Keyword before a function.
 // this prototype also has a __proto__ inside it, things like toString are inside
-var obj = {
+const obj = {
     num: 3
 };
 obj.num; // 3
@@ -26,10 +26,10 @@ multiplyBy2.toString();
 // looks for multiplyBy2 in global memory, then because we are using dot notation it will be looking at the "object" part of the function,
 // it will look inside the multiplyBy2.__proto__, which is linked to Function.prototype, inside Function.prototype there will be toString.
 // Function.prototype is for ALL functions.
-// lookup on multiplyBy2 using dot notation -> can't find it on the object -> look in __proto__ on the function, which links to Function.prototype
+// lookup on multiplyBy2 using dot notation -> can't find it on the object -> look in __proto__ on multiplyBy2, which links to Function.prototype
 // Function.prototype has the method, we use it.
 multiplyBy2.hasOwnProperty("score");
-//  lookup on multiplyBy2 using dot notation -> can't find it on the object -> look in __proto__ on the function, which links to Function.prototype -> Function.prototype has a __proto__,
+//  lookup on multiplyBy2 using dot notation -> can't find it on the object -> look in __proto__ on multiplyBy2, which links to Function.prototype -> Function.prototype has a __proto__,
 //  that __proto__ of Function.prototype links to Object.prototype, where we find anything that works on any object.
 // multiplyBy2.increase();
 // this would do the same as looking for hasOwnProperty, looking all the way up the chain until we reach the __proto__ of Object, which is null. and it fails because it does not exist.

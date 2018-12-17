@@ -39,12 +39,12 @@ multiplyBy2.toString();
 
 // Function.prototype is for ALL functions.
 
-// lookup on multiplyBy2 using dot notation -> can't find it on the object -> look in __proto__ on the function, which links to Function.prototype
+// lookup on multiplyBy2 using dot notation -> can't find it on the object -> look in __proto__ on multiplyBy2, which links to Function.prototype
 // Function.prototype has the method, we use it.
 
 
 multiplyBy2.hasOwnProperty("score");
-//  lookup on multiplyBy2 using dot notation -> can't find it on the object -> look in __proto__ on the function, which links to Function.prototype -> Function.prototype has a __proto__,
+//  lookup on multiplyBy2 using dot notation -> can't find it on the object -> look in __proto__ on multiplyBy2, which links to Function.prototype -> Function.prototype has a __proto__,
 //  that __proto__ of Function.prototype links to Object.prototype, where we find anything that works on any object.
 
 
