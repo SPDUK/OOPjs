@@ -1,7 +1,7 @@
 Just some basic notes for OOP stuff, testing out typescript a little bit plus it compiles to es5 code so you can see how things are handled in es5 JS
 
 Read .ts files for ES6, .js files for ES5
-
+___
 
 folders:
 - class: the keyword 'class' and what it does
@@ -10,14 +10,17 @@ folders:
 - prototypeChain: things to do with the prototype chain, explains why a method can be used on an object even if that object does not have that method directly 
 
 
+___
 TL;DR:
 \_\_proto\_\_ goes onto an object returned from a class
 
 prototype is on the class 
 
-
+___
 why does `typeof String` return "function"?:
 (also the same with Object, Array etc)
+
+
 Because String is a function object, not just a normal object. This is so it can hold all of the methods for use on only strings in javascript.  If you `console.log(String.prototype)` a list of all string methods will show up, but 
 you can even add to this. 
 
