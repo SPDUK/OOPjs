@@ -2,7 +2,16 @@ Just some basic notes for OOP stuff, testing out typescript a little bit plus it
 
 Read .ts files for ES6, .js files for ES5
 
-folders:
+TL;DR:
+\_\_proto\_\_ goes onto an object returned from a class
 
-new: the keyword 'new' when used to create a class
-this: keyword 'this'
+prototype is on the class 
+
+
+
+
+folders:
+- class: the keyword 'class' and what it does
+- new: the keyword 'new' when used to create a class
+
+- this: keyword 'this'
