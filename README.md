@@ -4,10 +4,12 @@ Read .ts files for ES6, .js files for ES5
 ___
 
 folders:
-- class: the keyword 'class' and what it does
-- new: the keyword 'new' when used to create a class
-- this: keyword 'this'
-- prototypeChain: things to do with the prototype chain, explains why a method can be used on an object even if that object does not have that method directly 
+- call: the method .call and how it uses `this`.
+- class: the keyword `class` and what it does.
+- csbin-io-OOP: contains the answers to challenges on http://csbin.io/oop
+- new: the keyword `new`  and what it does when used, also contains info on `constructor`.
+- this: keyword `this` and how it works with arrow functions, build in methods etc.
+- prototypeChain: things to do with the prototype chain, explains why a method can be used on an object even if that object does not have that method directly.
 
 
 ___
