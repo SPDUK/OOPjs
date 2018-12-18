@@ -1,6 +1,13 @@
+"use strict";
 // keyword 'this' is an implicit parameter, like how you would supply n to the function (n) => n * n
 // when using 'this' inside an object it creates the 'this' context, and will refer to that object
 // inside a regular function it will refer to the global object, unless using es6 arrow functions then it will bind this to the object it's being used in
+// when using the new keyword it does 3 things
+// 1) Creates an empty object called this
+// 2) Adds __proto__ to the this object, using whatever class or function the new keyword is before's prototype
+// 3) Implicitly returns the this object
+// the main purpose of using the new keyword is to bind the prototype of one class or function to a new object,
+// so that new object being created has access to that class's prototype functions, but they are not placed onto every new object, they just have a reference to one store of functions
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function userCreator(name, score) {
     // Object.create always returns an empty object
@@ -63,3 +70,4 @@ const user3 = new UserCreator("Eva", 9);
 user3.increment();
 console.log(user3); // UserCreator { name: 'Eva', score: 10 }
 console.log(user3.__proto__); //  UserCreator { increment: [Function], login: [Function] }
+module.exports = {};

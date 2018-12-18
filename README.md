@@ -12,10 +12,16 @@ folders:
 
 ___
 TL;DR:
-\_\_proto\_\_ goes onto an object returned from a class
+`__proto__` goes onto an object returned from a class, when a method is being used on an object JS will look up initially on that object, then look into `__proto__` 
 
-prototype is on the class 
+`prototype` is on the class, any object that is returned from a class will have access to anything inside prototype, through the `__proto__` property
 
+__
+
+The first thing you pass in to setPrototypeOf will controlled by the second thing you pass in, so you will be mutating the `__proto__` of the first argument and setting that `__proto__` to whatever the second argument is.
+`Object.setPrototypeOf(paidUserFunctions, normalUserFunctions)` will set normalUserFunctions as the `__proto__` of paidUserFunctions, meaning you can now create a paidUser with paidUserFunctions, but it will also have access further down the chain to normalUserFunctions, to make that paidUser be the same as a normal user, but with additional paid functions added
+
+Object.setPrototypeOf is setting the `__proto__`, even though it says "setPrototype" it is actually setting the `__proto__`
 ___
 why does `typeof String` return "function"?:
 (also the same with Object, Array etc)

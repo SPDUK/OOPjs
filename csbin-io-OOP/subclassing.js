@@ -7,6 +7,8 @@ const userFunctionStore = {
     }
 };
 function userFactory(name, score) {
+    // using Object.create puts anything passed in into the __proto__ of whatever it is used on, so here we are storing a __proto__ inside the PaidUserCreator.prototype,
+    // making it a subclass of UserCreator, and it will have access to everything UserCreator does down the prototype chain
     let user = Object.create(userFunctionStore);
     user.type = "User";
     user.name = name;

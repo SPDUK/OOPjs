@@ -46,3 +46,5 @@ var thai = new DeveloperClass("Thai", 32);
 console.log(thai.name); // -> Logs 'Thai'
 thai.introduce(); //-> Logs 'Hello World, my name is Thai'
 
+
+

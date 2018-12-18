@@ -51,3 +51,5 @@ UserCreatorTwo.prototype.login = function () {
 };
 
 
+// so typescript doesn't complain about global variables
+export = {}

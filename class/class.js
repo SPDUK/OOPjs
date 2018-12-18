@@ -1,3 +1,4 @@
+"use strict";
 // a class is nothing but syntactic 'sugar' or a facade over a regular function, but using class and new together makes life a lot easier.
 // a class is just a function/object combo (basically just a normal function), but javascript will take care of putting this information into the prototype object inside that function
 //  the function that constructs the object is called the constructor, so instead of typing dog.prototype.name you just use the constructor instead.
@@ -35,3 +36,4 @@ UserCreatorTwo.prototype.increment = function () {
 UserCreatorTwo.prototype.login = function () {
     console.log("login");
 };
+module.exports = {};
